@@ -1,0 +1,12 @@
+﻿datasets
+huggingface_hub
+pandas
+numpy
+matplotlib
+seaborn
+transformers
+torch
+scikit-learn
+deep-translator
+pyvi
+gradio
