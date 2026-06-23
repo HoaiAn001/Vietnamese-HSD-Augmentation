@@ -24,6 +24,18 @@ Text is normalized to NFC Unicode, whitespace is collapsed, empty rows are remov
 
 Fixed train/dev/test splits are produced by `scripts/prepare_splits.py` using the seed in `configs/config.yaml`.
 
+## Hugging Face Versioning
+
+The Hub dataset repo should use one config per experiment:
+
+- `baseline`: original processed train/dev/test
+- `bt`: Back Translation augmented train with unchanged validation/test
+- `eda`: EDA augmented train with unchanged validation/test
+- `llm`: LLM augmented train with unchanged validation/test
+- `combined`: combined augmented train with unchanged validation/test
+
+Validation and test splits must remain untouched across configs.
+
 ## Limitations
 
 Private datasets cannot be redistributed through this repository. Label definitions may differ across source datasets, so merged data should be manually inspected before final experiments.
